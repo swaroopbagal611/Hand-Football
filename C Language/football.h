@@ -3,6 +3,7 @@ int player, player1, alpha, alpha1, score, score1;
 void toss(){
     system("cls");
     system("color 0A");
+    srand(time(NULL));
     int toss = rand() % 2, a;
     printf("Heads or Tails Choose 0 for Heads and 1 for Tails: \n");
     scanf("%d", &a);
@@ -57,6 +58,7 @@ void odd(){
         printf("Enter Your Choice: \n");
         scanf("%d", &player);
         if(player == 0 || player == 1 || player == 2 || player == 3 || player == 4 || player == 5 || player == 6){
+            srand(time(NULL));
             alpha = rand() % 7;
             printf("ALPHA: %d\nPlayer: %d\n", alpha, player);
             if(player % 2 != 0 && player == alpha){
@@ -85,6 +87,7 @@ void even(){
         printf("Enter Your Choice: \n");
         scanf("%d", &player1);
         if(player1 == 0 || player1 == 1 || player1 == 2 || player1 == 3 || player1 == 4 || player1 == 5 || player1 == 6){
+            srand(time(NULL));
             alpha1 = rand() % 7;
             printf("ALPHA: %d\nPlayer: %d\n", alpha1, player1);
             if(player1 % 2 != 0 && player1 == alpha1){
